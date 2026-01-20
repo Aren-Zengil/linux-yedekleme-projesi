@@ -1,15 +1,12 @@
-# Linux Otomatik Yedekleme Projesi
+# Açık Kaynak Dersi - Yedekleme Otomasyonu Projesi
 
-Bu projeyi Açık Kaynak İşletim Sistemleri dersi için hazırladım. Amacım, Linux sistemlerde manuel olarak yapılan yedekleme işlemini küçük bir kod parçasıyla (Bash Script) otomatik hale getirmek.
+Bu projeyi, Linux sistemlerde verilerimizi manuel olarak kopyalamak yerine tek bir komutla nasıl güvenli hale getirebileceğimizi göstermek için hazırladım.
 
-## Proje İçeriği
-- `yedekle.sh`: Bu dosya belirlediğim klasörü alıp, o günün tarihiyle sıkıştırarak yedek klasörüne taşıyor.
-- Kullanılan komutlar: `tar`, `chmod`, `variables`, `date`.
+### Neler Ekledim?
+1. **Otomatik Klasör Oluşturma:** Eğer yedekleme yapacağımız klasörü silersek script hata vermiyor, kendisi klasörü tekrar oluşturuyor.
+2. **Hata Takibi:** Script her çalıştığında `yedek_notlari.txt` dosyasına işlemin başarılı olup olmadığını yazıyor. Böylece geçmişe dönük kontrol yapabiliyorum.
+3. **Disk Alanı Sorgulama:** Yedeklemeye başlamadan önce sistemde ne kadar boş yer olduğunu terminale yazdırarak kullanıcıyı bilgilendiriyor.
 
-## Nasıl Çalışır?
-1. Script dosyasını indirin.
-2. `chmod +x yedekle.sh` ile yetki verin.
-3. `./yedekle.sh` yazarak çalıştırın.
-
-## Projeyi Hazırlarken Bende Birkaç Yeni Bilgi Öğrendim
-Script yazarken değişken tanımlamayı ve Linux'ta dosya sıkıştırma mantığını öğrendim. İleride bu scripti 'crontab' kullanarak her gece otomatik çalışacak şekilde ayarlamayı planlıyorum.
+### Nasıl Çalıştırılır?
+* Terminale `bash yedekle.sh` yazmanız yeterlidir.
+* İzin hatası alırsanız `chmod +x yedekle.sh` komutunu kullanın.
