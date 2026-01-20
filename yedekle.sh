@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# --- PROJE AYARLARI ---
 # Yedeklenecek klasoru buraya yaziyoruz
 dosyalar="/home/kullanici/Documents"
 # Yedegin gidecegi yer
@@ -32,3 +31,4 @@ if [ $? -eq 0 ]; then
 else
     echo "HATA: Bir seyler ters gitti, yedek alinamadi." >> hata_log.txt
 fi
+
